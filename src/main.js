@@ -9,12 +9,14 @@ import {
 import Home from './containers/Home';
 import Lesson from './containers/Lesson';
 import Profile from './containers/Profile';
-
+import App from './containers/App';
 render(<Router>
-  <Switch>
-    <Route path='/home' component={Home}/>
-    <Route path='/profile' component={Profile}/>
-    <Route path='/Lesson' component={Lesson}/>
-    <Redirect to="/home"/>
-  </Switch>
-</Router>,document.querySelector('#root'));
+  <App>
+    <Switch>
+      <Route path='/home' component={Home}/>
+      <Route path='/profile' component={Profile}/>
+      <Route path='/Lesson' component={Lesson}/>
+      <Redirect to="/home"/>
+    </Switch>
+  </App>
+</Router>, document.querySelector('#root'));
